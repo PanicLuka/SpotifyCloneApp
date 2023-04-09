@@ -1,0 +1,226 @@
+.navBar {
+  height: 92px;
+  border-bottom: solid 1px rgb(206, 202, 202);
+  align-items: center;
+}
+
+.divBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 120px;
+}
+
+.divBody {
+  margin: auto;
+  width: 450px;
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-top: -10px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.titleParagraph {
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.btnFacebook {
+  width: 450px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: rgb(24, 119, 242);
+  color: aliceblue;
+  font-weight: bold;
+  border: solid 1px rgb(112, 109, 109);
+}
+
+.btnFacebook:hover {
+  outline: none;
+  border: 1px solid black;
+}
+.btnApple {
+  width: 450px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: aliceblue;
+  font-weight: bold;
+  border: solid 1px rgb(112, 109, 109);
+}
+
+.btnApple:hover {
+  outline: none;
+  border: 1px solid black;
+}
+
+.btnGoogle {
+  width: 450px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: aliceblue;
+  color: grey;
+  font-weight: bold;
+  border: solid 1px rgb(112, 109, 109);
+}
+
+.btnGoogle:hover {
+  outline: none;
+  border: 1px solid black;
+}
+
+.btnsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hr {
+  width: 450px;
+}
+
+.fieldsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.credentialsParagraph {
+  padding-top: 15px;
+  font-size: 13px;
+  text-align: left;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.emailInput {
+  text-indent: 8px;
+  width: 100%;
+  height: 48px;
+  border: solid 1px rgb(145, 140, 140);
+  border-radius: 4px;
+}
+
+.passwordInput {
+  text-indent: 8px;
+  width: 100%;
+  height: 48px;
+  border: solid 1px rgb(145, 140, 140);
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid black;
+}
+
+input:hover {
+  outline: none;
+  border: 1px solid black;
+}
+
+.forgetParagraph {
+  cursor: pointer;
+  padding-top: 15px;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.forgetParagraph:hover {
+  outline: none;
+  color: #1ed760;
+}
+
+.signInDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.signInBtn {
+  width: 117px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #1ed760;
+  color: black;
+  font-weight: bold;
+  border: solid 1px rgb(247, 238, 238);
+  transition: all 0.2s ease-in-out;
+}
+
+.signInBtn:hover {
+  transform: scale(1.08);
+}
+
+.dontHaveAccountPar {
+  padding-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.signUpBtn {
+  width: 450px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: aliceblue;
+  color: grey;
+  font-weight: bold;
+  border: solid 1px rgb(112, 109, 109);
+}
+
+.signUpBtn:hover {
+  outline: none;
+  border: 1px solid black;
+}
+
+svg {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+.svgFacebook {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+.svgApple {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -4px;
+}
+
+/* ::placeholder {
+  padding-left: 8px;
+} */
+
+/* .separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
