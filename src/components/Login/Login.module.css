@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 120px;
+  height: 100%;
 }
 
 .divBody {
@@ -19,9 +19,9 @@
 }
 
 .title {
+  margin-top: 15px;
   font-size: 32px;
   text-align: center;
-  margin-top: -10px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   color: black;

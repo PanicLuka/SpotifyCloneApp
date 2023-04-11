@@ -1,0 +1,106 @@
+.sideBarDiv {
+  position: absolute;
+  min-height: 100%;
+  width: 241px;
+  background-color: black;
+}
+
+.spotifyLogoDiv {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+}
+
+.title {
+  margin-top: 15px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.listItemsDiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.titleItemsDiv {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 150px;
+}
+
+.yourPlaylistDiv {
+  margin-top: 32px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 150px;
+}
+
+/* .searchTitleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+.libraryTitleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+} */
+
+.itemsTitle {
+  color: grey;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* .searchTitle {
+  color: grey;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+. {
+  color: grey;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+} */
+
+.svgItems {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -14px;
+}
+
+/* .svgSearch {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -14px;
+}
+
+.svgLibrary {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: -14px;
+} */
