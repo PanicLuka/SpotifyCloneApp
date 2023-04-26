@@ -30,6 +30,7 @@ const PlaylistList = () => {
                   source={image.url}
                   name={item.name}
                   key={item.id}
+                  id={item.id}
                   description={item.description}
                 />
               )

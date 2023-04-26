@@ -3,6 +3,7 @@ import LoginPage from './pages/LoginPage'
 import Sidebar from './components/Sidebar/Sidebar'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header/Header'
+import PlaylistTracks from './components/PlaylistTracks/PlaylistTracks'
 
 function App() {
   const location = useLocation()
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/tracks/:id" element={<PlaylistTracks />} />
       </Routes>
     </main>
   )

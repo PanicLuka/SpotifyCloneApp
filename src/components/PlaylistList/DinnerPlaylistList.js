@@ -3,7 +3,7 @@ import useFetch from '../../hooks/use-fetch'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
-const PlaylistList = () => {
+const DinnerPlaylistList = () => {
   const { getDinnerPlaylists } = useFetch()
 
   useEffect(() => {
@@ -30,6 +30,7 @@ const PlaylistList = () => {
                   source={image.url}
                   name={item.name}
                   key={item.id}
+                  id={item.id}
                   description={item.description}
                 />
               )
@@ -43,4 +44,4 @@ const PlaylistList = () => {
   )
 }
 
-export default PlaylistList
+export default DinnerPlaylistList

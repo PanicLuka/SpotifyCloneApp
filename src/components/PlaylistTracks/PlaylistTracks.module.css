@@ -1,0 +1,30 @@
+.mainDiv {
+  display: flex;
+  justify-content: top;
+  align-items: left;
+  flex-direction: column;
+  position: relative;
+  left: 240px;
+  width: 171.65vh;
+  height: 120vh;
+  background-color: #2e2c2c;
+}
+
+.textDiv {
+  position: relative;
+  /* width: 171.65vh; */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: row;
+  height: 340px;
+  background-color: grey;
+}
+
+.coverImage {
+  position: relative;
+  top: 78px;
+  left: 35px;
+  width: 232px;
+  height: 232px;
+}
