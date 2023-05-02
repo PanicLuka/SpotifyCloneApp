@@ -27,4 +27,112 @@
   left: 35px;
   width: 232px;
   height: 232px;
+  box-shadow: 7px 7px 20px black;
+}
+
+.songTitleDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  left: 60px;
+  height: 316px;
+  width: 1074px;
+  background-color: inherit;
+}
+
+.firstTitle {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  top: 110px;
+}
+
+.secondTitle {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 96px;
+  top: 80px;
+}
+
+.playlistDescription {
+  position: relative;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  top: 63px;
+}
+
+.spotifyIcon {
+  width: 25px;
+  height: 25px;
+  color: #1ed760;
+}
+
+.spotifyIcon:hover {
+  color: #1ed760;
+}
+
+.lastTitleRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  top: 55px;
+}
+
+.spotifyTitle {
+  font-weight: bold;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: relative;
+  left: 5px;
+}
+.dotParag {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  bottom: 10px;
+  left: 8px;
+}
+
+.followersTitle {
+  position: relative;
+  left: 12px;
+  color: white;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dotParagSecond {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  bottom: 10px;
+  left: 15px;
+}
+
+.numberOfSongsTitle {
+  position: relative;
+  left: 19px;
+  color: white;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.behindIconDiv {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 15px;
 }

@@ -4,9 +4,18 @@ import Sidebar from './components/Sidebar/Sidebar'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header/Header'
 import PlaylistTracks from './components/PlaylistTracks/PlaylistTracks'
+import { useDispatch } from 'react-redux'
+import { playlistsActions } from './store/playlists-slice'
 
 function App() {
   const location = useLocation()
+  const dispatch = useDispatch()
+
+  if (!location.pathname.includes('tracks')) {
+    dispatch(playlistsActions.removeAllTracks())
+    dispatch(playlistsActions.removeCoverImage())
+    dispatch(playlistsActions.removePlaylist())
+  }
 
   return (
     <main>

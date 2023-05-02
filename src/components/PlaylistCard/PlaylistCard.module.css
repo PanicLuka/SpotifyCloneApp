@@ -1,7 +1,7 @@
 .card {
   cursor: pointer;
   width: 182px;
-  height: 300px;
+  height: 320px;
   background-color: #181818;
   margin-left: 23px;
   border-radius: 5px;
@@ -39,3 +39,26 @@
   color: grey;
   font-size: 12px;
 }
+
+.divPlayBtn {
+  position: absolute;
+  background-color: black;
+  width: 50px;
+  height: 45px;
+  top: 125px;
+  margin-left: 115px;
+  border-radius: 45px;
+}
+.svgPlayBtn {
+  width: 50px;
+  height: 50px;
+  color: #1ed760;
+}
+
+.svgPlayBtn:hover {
+  color: #1ed760;
+}
+
+/* svg:hover {
+  color: green;
+} */

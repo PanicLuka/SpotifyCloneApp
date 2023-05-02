@@ -23,8 +23,8 @@ const DinnerPlaylistList = () => {
           return
         }
         return (
-          <div>
-            {item.images.map((image) => {
+          <div key={item.id}>
+            {item.images.map((image, index) => {
               return (
                 <PlaylistCard
                   source={image.url}

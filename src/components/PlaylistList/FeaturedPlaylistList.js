@@ -3,7 +3,7 @@ import useFetch from '../../hooks/use-fetch'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
-const PlaylistList = () => {
+const FeaturedPlaylistList = () => {
   const { getFeaturedPlaylists } = useFetch()
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const PlaylistList = () => {
           return
         }
         return (
-          <div>
+          <div key={item.id}>
             {item.images.map((image) => {
               return (
                 <PlaylistCard
@@ -44,4 +44,4 @@ const PlaylistList = () => {
   )
 }
 
-export default PlaylistList
+export default FeaturedPlaylistList

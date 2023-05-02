@@ -14,12 +14,14 @@ const useFetch = (id) => {
 
   const coverImageURL = 'https://api.spotify.com/v1/playlists/' + id + '/images'
 
+  const playlistURL = 'https://api.spotify.com/v1/playlists/' + id
+
   const [error, setError] = useState(null)
 
   const config = {
     headers: {
       Authorization:
-        'Bearer BQCCWbmSdz9l53PFhlKNjUZm8M_Gg_9mfvMJ082ZwLM3sTmh6cObM2rf0zd7E9vaGef0Q9d99u-G-3d3RsmIdbVgfyLw0w3EUFqi5emlCZdE1uWlayaz',
+        'Bearer BQC_eNKXtqpszozykRiF8LGIkhExsHntwnnwCCNcMynT31hyBavXqXaUPEdPweqovG-ipw5QS8kBSzZJf7A8ofZK-WYGC1Ht9Il0pQOO66Wu8iQDjnbk',
       'Content-type': 'application/x-www-form-urlencoded',
     },
   }
@@ -48,7 +50,7 @@ const useFetch = (id) => {
 
   const getTracksByPlaylist = async () => {
     await axios.get(tracksURL, config).then((response) => {
-      console.log(response.data)
+      // console.log(response.data)
       dispatch(playlistsActions.setAllTracks(response.data))
     })
   }
@@ -59,12 +61,19 @@ const useFetch = (id) => {
     })
   }
 
+  const getPlaylistById = async () => {
+    await axios.get(playlistURL, config).then((response) => {
+      dispatch(playlistsActions.setPlaylist(response.data))
+    })
+  }
+
   return {
     error,
     getFeaturedPlaylists,
     getDinnerPlaylists,
     getTracksByPlaylist,
     getPlaylistCoverImage,
+    getPlaylistById,
   }
 }
 
