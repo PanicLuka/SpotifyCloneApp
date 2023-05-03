@@ -6,8 +6,9 @@
   position: relative;
   left: 240px;
   width: 171.65vh;
-  height: 120vh;
+  /* height: 120vh; */
   background-color: #2e2c2c;
+  overflow: hidden;
 }
 
 .textDiv {
@@ -135,4 +136,52 @@
   height: 25px;
   background-color: black;
   border-radius: 15px;
+}
+
+.borderDiv {
+  display: flex;
+  flex-direction: row;
+  height: 104px;
+  align-items: left;
+  justify-content: left;
+  background-color: inherit;
+}
+
+.playBtn {
+  width: 56px;
+  height: 56px;
+  color: #1ed760;
+  position: relative;
+  top: 2px;
+}
+
+.likeIcon {
+  width: 32px;
+  height: 32px;
+  color: grey;
+  position: relative;
+  left: 55px;
+  top: 32px;
+  cursor: pointer;
+}
+
+.threeDots {
+  width: 32px;
+  height: 32px;
+  color: grey;
+  position: relative;
+  top: 32px;
+  left: 90px;
+  cursor: pointer;
+}
+
+.backgroundDiv {
+  background-color: black;
+  width: 56px;
+  height: 56px;
+  border-radius: 115px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
 }

@@ -3,7 +3,13 @@ import useFetch from '../../hooks/use-fetch'
 import classes from './PlaylistTracks.module.css'
 import { useSelector } from 'react-redux'
 import { useLocation, useParams } from 'react-router-dom'
-import { Spotify } from 'react-bootstrap-icons'
+import {
+  Spotify,
+  PlayCircleFill,
+  SuitHeart,
+  ThreeDots,
+} from 'react-bootstrap-icons'
+import PlaylistTrack from '../PlaylistTrack/PlaylistTrack'
 
 const PlaylistTracks = () => {
   const { pathname } = useLocation()
@@ -61,6 +67,29 @@ const PlaylistTracks = () => {
             </div>
           </div>
         </div>
+        <div className={classes.borderDiv}>
+          <div className={classes.backgroundDiv}>
+            <PlayCircleFill className={classes.playBtn} />
+          </div>
+          <SuitHeart className={classes.likeIcon} />
+          <ThreeDots className={classes.threeDots} />
+        </div>
+        {playListTracks.items.map((item, index) => {
+          return (
+            <PlaylistTrack
+              key={index}
+              id={index}
+              imgSrc={item.track.album.images[2].url}
+              songName={item.track.name}
+              albumName={item.track.album.name}
+              artists={item.track.album.artists[0].name}
+              duration={item.track.duration_ms}
+              year={item.added_at.substr(0, 4)}
+              month={item.added_at.substr(5, 2)}
+              day={item.added_at.substr(8, 2)}
+            />
+          )
+        })}
       </div>
     </>
   )

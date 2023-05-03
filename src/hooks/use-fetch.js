@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { playlistsActions } from '../store/playlists-slice'
 import axios from 'axios'
@@ -16,12 +15,12 @@ const useFetch = (id) => {
 
   const playlistURL = 'https://api.spotify.com/v1/playlists/' + id
 
-  const [error, setError] = useState(null)
+  // const [error, setError] = useState(null)
 
   const config = {
     headers: {
       Authorization:
-        'Bearer BQC_eNKXtqpszozykRiF8LGIkhExsHntwnnwCCNcMynT31hyBavXqXaUPEdPweqovG-ipw5QS8kBSzZJf7A8ofZK-WYGC1Ht9Il0pQOO66Wu8iQDjnbk',
+        'Bearer BQAsgUHizehyutTelauh7i9WWACFIfj7JYJRzO5_1s4r-4pF8JeD8ZpoeNLh2mxLjE10BIRQGLNAwF98Uvy1UzKikPNKD9RoGi7nWInuAkgjhp_iT9R3',
       'Content-type': 'application/x-www-form-urlencoded',
     },
   }
@@ -68,7 +67,7 @@ const useFetch = (id) => {
   }
 
   return {
-    error,
+    // error,
     getFeaturedPlaylists,
     getDinnerPlaylists,
     getTracksByPlaylist,

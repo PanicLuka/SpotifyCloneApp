@@ -1,0 +1,74 @@
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  height: 56px;
+  background-color: inherit;
+}
+
+.albumCover {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 80px;
+}
+
+.textDiv {
+  position: relative;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  background-color: inherit;
+  width: 381px;
+}
+
+.albumDiv {
+  position: relative;
+  width: 390px;
+}
+.songName {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.artist {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(207, 203, 203);
+  position: relative;
+  bottom: 16px;
+}
+
+.albumName {
+  color: rgb(207, 203, 203);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(207, 203, 203);
+  position: relative;
+  left: 250px;
+  top: 25px;
+}
+
+.addedAt {
+  color: rgb(207, 203, 203);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(207, 203, 203);
+  position: relative;
+  left: 350px;
+  top: 25px;
+}
+
+.orderNumber {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(207, 203, 203);
+  position: relative;
+  top: 10px;
+  left: 45px;
+}
