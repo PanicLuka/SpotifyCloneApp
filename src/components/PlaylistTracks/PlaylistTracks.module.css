@@ -185,3 +185,54 @@
   left: 20px;
   cursor: pointer;
 }
+
+.trackHeader {
+  display: flex;
+  height: 20px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  background-color: inherit;
+}
+
+.nameHeader {
+  position: relative;
+  left: 125px;
+  font-size: 13px;
+  color: #c0bbbb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.albumHeader {
+  position: relative;
+  left: 680px;
+  font-size: 13px;
+  color: #c0bbbb;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dateHeader {
+  position: relative;
+  left: 1125px;
+  font-size: 13px;
+  color: #c0bbbb;
+  font-weight: bold;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.timeHeader {
+  position: relative;
+  left: 1435px;
+  font-size: 13px;
+  color: #c0bbbb;
+}
+
+.borderLine {
+  width: 1550px;
+  position: relative;
+  color: #c0bbbb;
+  left: 45px;
+}

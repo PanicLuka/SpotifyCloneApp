@@ -2,9 +2,14 @@ import classes from './Header.module.css'
 import { useNavigate } from 'react-router-dom'
 import { CaretLeftFill } from 'react-bootstrap-icons'
 import { CaretRightFill } from 'react-bootstrap-icons'
+import React from 'react'
 
 const Header = () => {
   const navigate = useNavigate()
+
+  const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env
+
+  // console.log(process.env.REACT_APP_CLIENT_ID)
 
   const toLoginPage = () => {
     navigate('login')
@@ -14,7 +19,10 @@ const Header = () => {
     fetch('https://accounts.spotify.com/api/token', {
       method: 'POST',
       body:
-        'grant_type=client_credentials&client_id=8eb93a59630947ed9f7426ebcd010133&client_secret=1a0abc3bbd9d46129c15d41adc88f7da',
+        'grant_type=client_credentials&client_id=' +
+        REACT_APP_CLIENT_ID +
+        '&client_secret=' +
+        REACT_APP_CLIENT_SECRET,
       headers: {
         'Content-type': 'application/x-www-form-urlencoded',
       },

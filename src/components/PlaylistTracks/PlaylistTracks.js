@@ -8,6 +8,7 @@ import {
   PlayCircleFill,
   SuitHeart,
   ThreeDots,
+  Clock,
 } from 'react-bootstrap-icons'
 import PlaylistTrack from '../PlaylistTrack/PlaylistTrack'
 
@@ -31,6 +32,15 @@ const PlaylistTracks = () => {
   )
   const playlist = useSelector((state) => state.playlists.playlist)
   const playListTracks = useSelector((state) => state.playlists.playlistTracks)
+
+  const formatDuration = (millis) => {
+    var minutes = Math.floor(millis / 60000)
+    var seconds = ((millis % 60000) / 1000).toFixed(0)
+    return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
+  }
+
+  // const formatedDuration = formatDuration(240693)
+  // console.log(formatedDuration)
 
   if (playListCoverImage === undefined || playlist.followers === undefined) {
     return <p>still loading...</p>
@@ -74,7 +84,21 @@ const PlaylistTracks = () => {
           <SuitHeart className={classes.likeIcon} />
           <ThreeDots className={classes.threeDots} />
         </div>
+        <div className={classes.trackHeader}>
+          <p className={classes.nameHeader}>Name</p>
+          <p className={classes.albumHeader}>Album</p>
+          <p className={classes.dateHeader}>Date</p>
+          <Clock className={classes.timeHeader} />
+        </div>
+        <hr className={classes.borderLine}></hr>
         {playListTracks.items.map((item, index) => {
+          const date = new Date(item.added_at)
+          const formattedDate = date.toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+          })
+          const formattedDuration = formatDuration(item.track.duration_ms)
           return (
             <PlaylistTrack
               key={index}
@@ -83,10 +107,12 @@ const PlaylistTracks = () => {
               songName={item.track.name}
               albumName={item.track.album.name}
               artists={item.track.album.artists[0].name}
-              duration={item.track.duration_ms}
-              year={item.added_at.substr(0, 4)}
-              month={item.added_at.substr(5, 2)}
-              day={item.added_at.substr(8, 2)}
+              duration={formattedDuration}
+              songDate={formattedDate}
+
+              // year={item.added_at.substr(0, 4)}
+              // month={item.added_at.substr(5, 2)}
+              // day={item.added_at.substr(8, 2)}
             />
           )
         })}
