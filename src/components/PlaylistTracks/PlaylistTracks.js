@@ -11,6 +11,7 @@ import {
   Clock,
 } from 'react-bootstrap-icons'
 import PlaylistTrack from '../PlaylistTrack/PlaylistTrack'
+import TracksLoader from '../HomeLoader/TracksLoader'
 
 const PlaylistTracks = () => {
   const { pathname } = useLocation()
@@ -39,13 +40,14 @@ const PlaylistTracks = () => {
     return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
   }
 
-  // const formatedDuration = formatDuration(240693)
-  // console.log(formatedDuration)
-
-  if (playListCoverImage === undefined || playlist.followers === undefined) {
-    return <p>still loading...</p>
+  if (
+    playListTracks === undefined ||
+    playlist === undefined ||
+    playListCoverImage === undefined ||
+    playlist.followers === undefined
+  ) {
+    return <TracksLoader />
   }
-
   return (
     <>
       <div className={classes.mainDiv}>

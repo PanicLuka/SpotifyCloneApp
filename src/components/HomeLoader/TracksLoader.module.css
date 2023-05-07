@@ -1,0 +1,22 @@
+.mainDiv {
+  position: relative;
+}
+.titleDiv {
+  width: 171.65vh;
+
+  height: 300px;
+  background-color: rgb(80, 77, 77);
+  left: 240px;
+  position: relative;
+  top: 64px;
+}
+.tracksLoader {
+  /* background-color:#3f3d3d;
+          foreground-color:#969393; */
+  position: relative;
+  top: 64px;
+  height: 100px;
+  background-color: rgb(80, 77, 77);
+  left: 240px;
+  width: 171.65vh;
+}

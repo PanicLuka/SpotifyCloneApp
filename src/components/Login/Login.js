@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './Login.module.css'
 import { Apple, Facebook, Google, Spotify } from 'react-bootstrap-icons'
 
 const Login = () => {
+  const [enteredEmail, setEnteredEmail] = useState('')
+  const [enteredPassword, setEnteredPassword] = useState('')
+
+  const emailChangeHander = (event) => {
+    setEnteredEmail(event.target.value)
+  }
+
+  const passwordChangeHandler = (event) => {
+    setEnteredPassword(event.target.value)
+  }
+
+  console.log(enteredEmail)
+
   return (
     <>
       {/* <p>Login Component</p> */}
@@ -43,12 +56,14 @@ const Login = () => {
               type="Email"
               placeholder="Email address or username"
               className={classes.emailInput}
+              onChange={emailChangeHander}
             ></input>
             <p className={classes.credentialsParagraph}>Password</p>
             <input
               type="Password"
               placeholder="Password"
               className={classes.passwordInput}
+              onChange={passwordChangeHandler}
             ></input>
             <p className={classes.forgetParagraph}>Forgot password?</p>
             <div className={classes.signInDiv}>
