@@ -1,18 +1,22 @@
 import classes from './Home.module.css'
-import PlaylistList from '../PlaylistList/FeaturedPlaylistList'
-import DinnerPlaylistList from '../PlaylistList/DinnerPlaylistList'
+
+import Playlists from '../PlaylistList/Playlists'
 
 const Home = () => {
+  const categoryDinner = 'dinner'
+  const categoryFocus = 'focus'
+
   return (
     <div className={classes.divHome}>
       <p className={classes.featuredPlaylistTitle}>Featured</p>
+
       <div className={classes.featuredPlaylist}>
-        <PlaylistList />
+        <Playlists category={categoryFocus} />
       </div>
 
       <p className={classes.dinnerPlaylistTitle}>Dinner</p>
       <div className={classes.dinnerPlaylists}>
-        <DinnerPlaylistList />
+        <Playlists category={categoryDinner} />
       </div>
       <hr className={classes.hr}></hr>
     </div>

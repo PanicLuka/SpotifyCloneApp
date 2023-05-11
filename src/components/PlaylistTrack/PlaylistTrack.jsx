@@ -1,10 +1,19 @@
+// import useFetch from '../../hooks/use-fetch'
 import classes from './PlaylistTrack.module.css'
 
 const PlaylistTrack = (props) => {
-  // console.log(props.duration)
+  // const { putSongToStartState } = useFetch()
+
+  //PREMIUM REQUIRED
+  // const playSong = () => {
+  //   putSongToStartState()
+  // }
+
   return (
     <div className={classes.mainDiv}>
       <p className={classes.orderNumber}>{props.id + 1}</p>
+      {/* <audio controls onClick={playSong} /> */}
+
       <img src={props.imgSrc} className={classes.albumCover} />
       <div className={classes.textDiv}>
         <p className={classes.songName}>{props.songName}</p>

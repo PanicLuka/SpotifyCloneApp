@@ -6,14 +6,12 @@
   position: relative;
   left: 240px;
   width: 171.65vh;
-  /* height: 120vh; */
   background-color: #2e2c2c;
   overflow: hidden;
 }
 
 .textDiv {
   position: relative;
-  /* width: 171.65vh; */
   display: flex;
   justify-content: left;
   align-items: left;

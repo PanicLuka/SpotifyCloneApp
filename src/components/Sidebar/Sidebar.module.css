@@ -3,8 +3,6 @@
   min-height: 100%;
   width: 241px;
   background-color: black;
-  /* resize: horizontal;
-  overflow: auto; */
 }
 
 .spotifyLogoDiv {
@@ -14,6 +12,7 @@
   align-items: center;
   flex-direction: row;
   height: 50px;
+  cursor: pointer;
 }
 
 .title {
@@ -52,22 +51,6 @@
   width: 150px;
 }
 
-/* .searchTitleDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: 100%;
-}
-
-.libraryTitleDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: 100%;
-} */
-
 .itemsTitle {
   color: grey;
   font-size: 15px;
@@ -79,29 +62,11 @@
   color: white;
 }
 
-/* .searchTitle {
-  color: grey;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-. {
-  color: grey;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: bold;
-} */
-
 .svgItems {
   display: inline-block;
   margin-top: -14px;
   cursor: pointer;
 }
-
-/* svg:hover {
-  color: white;
-} */
 
 .spotifyLogo {
   width: 50px;
@@ -135,14 +100,3 @@
   height: 25px;
   color: grey;
 }
-/* .svgSearch {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: -14px;
-}
-
-.svgLibrary {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: -14px;
-} */

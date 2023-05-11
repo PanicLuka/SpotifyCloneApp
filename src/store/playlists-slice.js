@@ -5,8 +5,6 @@ const playlistSlice = createSlice({
   initialState: {
     playlistItems: [],
     dinnerPlaylistItems: [],
-    playlistTracks: [],
-    playListCoverImage: [],
     playlist: [],
   },
 
@@ -17,23 +15,12 @@ const playlistSlice = createSlice({
     setAllDinnerPlaylists(state, action) {
       state.dinnerPlaylistItems = action.payload
     },
-    setAllTracks(state, action) {
-      state.playlistTracks = action.payload
-    },
-    removeAllTracks(state) {
-      state.playlistTracks = []
-    },
-    setCoverImage(state, action) {
-      state.playListCoverImage = action.payload
-    },
-    removeCoverImage(state) {
-      state.playListCoverImage = []
-    },
+
     setPlaylist(state, action) {
       state.playlist = action.payload
     },
     removePlaylist(state) {
-      state.playlist = []
+      state.playlist = state.playlist
     },
   },
 })

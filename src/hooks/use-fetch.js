@@ -1,26 +1,24 @@
 import { useDispatch } from 'react-redux'
 import { playlistsActions } from '../store/playlists-slice'
 import axios from 'axios'
-import queryString from 'query-string'
 
 const useFetch = (id) => {
   const dispatch = useDispatch()
 
-  const { REACT_APP_CLIENT_ID, REACT_APP_CLIENT_SECRET } = process.env
+  const {
+    REACT_APP_CLIENT_ID,
+    REACT_APP_CLIENT_SECRET,
+    REACT_APP_BASE_URL,
+  } = process.env
 
-  const playlistsURL = 'https://api.spotify.com/v1/browse/featured-playlists'
-  const dinnerPlaylistURL =
-    'https://api.spotify.com/v1/browse/categories/dinner/playlists'
+  // const startSongURL = `${REACT_APP_BASE_URL}/me/player/play`
 
-  const tracksURL = 'https://api.spotify.com/v1/playlists/' + id + '/tracks'
+  const featuredPlaylistsURL = `${REACT_APP_BASE_URL}/browse/featured-playlists`
+  const dinnerPlaylistURL = `${REACT_APP_BASE_URL}/browse/categories/dinner/playlists`
 
-  const coverImageURL = 'https://api.spotify.com/v1/playlists/' + id + '/images'
-
-  const playlistURL = 'https://api.spotify.com/v1/playlists/' + id
+  const playlistURL = `${REACT_APP_BASE_URL}/playlists/${id}`
 
   const tokenURL = 'https://accounts.spotify.com/api/token'
-
-  // const [error, setError] = useState(null)
 
   const configTokenBody =
     'grant_type=client_credentials&client_id=' +
@@ -34,13 +32,32 @@ const useFetch = (id) => {
     },
   }
 
+  // const configStartSong = {
+  //   body: {
+  //     context_uri: 'spotify:track:1DIXPcTDzTj8ZMHt3PDt8p',
+  //     offset: {
+  //       position: 5,
+  //     },
+  //     position_ms: 0,
+  //   },
+  // }
+
   const config = {
     headers: {
-      Authorization: 'Bearer ' + localStorage.getItem('token'),
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
       'Content-type': 'application/x-www-form-urlencoded',
     },
   }
 
+  // TODO: practice try catch
+  // const getToken = async () => {
+  //   try{
+  //     const {data} = await axios.post(tokenURL, configTokenBody, configTokenHeaders)
+  //     localStorage.setItem('token', data.access_token)
+  //   }catch(err){
+  //     console.error(err)
+  //   }
+  // }
   const getToken = async () => {
     await axios
       .post(tokenURL, configTokenBody, configTokenHeaders)
@@ -51,7 +68,7 @@ const useFetch = (id) => {
 
   const getFeaturedPlaylists = async () => {
     try {
-      await axios.get(playlistsURL, config).then((response) => {
+      await axios.get(featuredPlaylistsURL, config).then((response) => {
         dispatch(playlistsActions.setAllPlaylists(response.data))
       })
     } catch (err) {
@@ -59,41 +76,18 @@ const useFetch = (id) => {
     }
   }
 
+  // const putSongToStartState = async () => {
+  //   try {
+  //     await axios.put(startSongURL, configStartSong, config)
+  //   } catch (err) {
+  //     console.error(err.message)
+  //   }
+  // }
+
   const getDinnerPlaylists = async () => {
     try {
       await axios.get(dinnerPlaylistURL, config).then((response) => {
         dispatch(playlistsActions.setAllDinnerPlaylists(response.data))
-      })
-    } catch (err) {
-      console.log(err)
-    }
-
-    // await axios
-    //   .get(
-    //     // 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd/tracks',
-    //     'https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd/images',
-    //     config,
-    //   )
-    //   .then((response) => {
-    //     console.log(response.data)
-    //   })
-  }
-
-  const getTracksByPlaylist = async () => {
-    try {
-      await axios.get(tracksURL, config).then((response) => {
-        // console.log(response.data)
-        dispatch(playlistsActions.setAllTracks(response.data))
-      })
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
-  const getPlaylistCoverImage = async () => {
-    try {
-      await axios.get(coverImageURL, config).then((response) => {
-        dispatch(playlistsActions.setCoverImage(response.data))
       })
     } catch (err) {
       console.log(err)
@@ -111,13 +105,11 @@ const useFetch = (id) => {
   }
 
   return {
-    // error,
     getFeaturedPlaylists,
     getDinnerPlaylists,
-    getTracksByPlaylist,
-    getPlaylistCoverImage,
     getPlaylistById,
     getToken,
+    // putSongToStartState,
   }
 }
 

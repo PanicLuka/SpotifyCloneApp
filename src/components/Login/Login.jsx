@@ -3,6 +3,7 @@ import classes from './Login.module.css'
 import { Apple, Facebook, Google, Spotify } from 'react-bootstrap-icons'
 
 const Login = () => {
+  // TODO/RESEARCH: do research how to use single object state, so you edit only nessessary fields
   const [enteredEmail, setEnteredEmail] = useState('')
   const [enteredPassword, setEnteredPassword] = useState('')
 
@@ -14,12 +15,8 @@ const Login = () => {
     setEnteredPassword(event.target.value)
   }
 
-  console.log(enteredEmail)
-
   return (
     <>
-      {/* <p>Login Component</p> */}
-
       <header>
         <nav className={classes.navBar}>
           <div className={classes.divBar}>
