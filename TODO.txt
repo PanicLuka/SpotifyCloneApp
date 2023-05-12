@@ -2,3 +2,5 @@
 [] not logged in pop up
 [] search page component
 [] css leveled up
+[] research async await additionally
+[] not logged in pop ups

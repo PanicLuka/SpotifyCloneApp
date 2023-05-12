@@ -59,11 +59,15 @@ const useFetch = (id) => {
   //   }
   // }
   const getToken = async () => {
-    await axios
-      .post(tokenURL, configTokenBody, configTokenHeaders)
-      .then((response) => {
-        localStorage.setItem('token', response.data.access_token)
-      })
+    try {
+      await axios
+        .post(tokenURL, configTokenBody, configTokenHeaders)
+        .then((response) => {
+          localStorage.setItem('token', response.data.access_token)
+        })
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   const getFeaturedPlaylists = async () => {
@@ -72,7 +76,7 @@ const useFetch = (id) => {
         dispatch(playlistsActions.setAllPlaylists(response.data))
       })
     } catch (err) {
-      console.log(err)
+      console.error(err)
     }
   }
 
@@ -90,7 +94,7 @@ const useFetch = (id) => {
         dispatch(playlistsActions.setAllDinnerPlaylists(response.data))
       })
     } catch (err) {
-      console.log(err)
+      console.error(err)
     }
   }
 
@@ -100,7 +104,7 @@ const useFetch = (id) => {
         dispatch(playlistsActions.setPlaylist(response.data))
       })
     } catch (err) {
-      console.log(err)
+      console.error(err)
     }
   }
 

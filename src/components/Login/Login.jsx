@@ -3,17 +3,26 @@ import classes from './Login.module.css'
 import { Apple, Facebook, Google, Spotify } from 'react-bootstrap-icons'
 
 const Login = () => {
-  // TODO/RESEARCH: do research how to use single object state, so you edit only nessessary fields
-  const [enteredEmail, setEnteredEmail] = useState('')
-  const [enteredPassword, setEnteredPassword] = useState('')
+  const [credentialsState, setCredentialsState] = useState({
+    enteredEmail: '',
+    enteredPassword: '',
+  })
 
   const emailChangeHander = (event) => {
-    setEnteredEmail(event.target.value)
+    setCredentialsState({
+      ...credentialsState,
+      enteredEmail: event.target.value,
+    })
   }
 
   const passwordChangeHandler = (event) => {
-    setEnteredPassword(event.target.value)
+    setCredentialsState({
+      ...credentialsState,
+      enteredPassword: event.target.value,
+    })
   }
+
+  console.log(credentialsState.enteredPassword)
 
   return (
     <>
