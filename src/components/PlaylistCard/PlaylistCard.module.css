@@ -1,17 +1,37 @@
-.card {
+/* .card {
   cursor: pointer;
   width: 182px;
   height: 320px;
   background-color: #181818;
   margin-left: 23px;
   border-radius: 5px;
+} */
+.card {
+  cursor: pointer;
+  width: 138px;
+  height: 270px;
+  background-color: #181818;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.imageContainer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.coverImages {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  box-shadow: 3px 3px 7px black;
 }
 
 .card:hover {
   background-color: #423f3f;
 }
 
-.coverImages {
+/* .coverImages {
   position: relative;
   margin-top: 15px;
   margin-left: 15px;
@@ -20,7 +40,7 @@
   width: 152px;
   height: 160px;
   box-shadow: 7px 7px 20px black;
-}
+} */
 
 .playlistName {
   position: relative;
@@ -57,4 +77,26 @@
 
 .svgPlayBtn:hover {
   color: #1ed760;
+}
+
+@media screen and (max-width: 1400px) {
+  .card {
+    cursor: pointer;
+    width: 100px;
+    height: 200px;
+    background-color: #181818;
+    margin-left: 23px;
+    border-radius: 5px;
+  }
+
+  .coverImages {
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 3px 3px 7px black;
+  }
 }

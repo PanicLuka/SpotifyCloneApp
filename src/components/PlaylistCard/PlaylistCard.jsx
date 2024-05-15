@@ -26,7 +26,10 @@ const PlaylistCard = (props) => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
+      <div className={classes.imageContainer}>
       <img className={classes.coverImages} src={props.source} />
+
+      </div>
       {isHovering && (
         <div className={classes.divPlayBtn}>
           <PlayCircleFill className={classes.svgPlayBtn} />
