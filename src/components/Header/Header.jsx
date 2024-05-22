@@ -11,11 +11,9 @@ const Header = () => {
 
   return (
     <div className={classes.navBar}>
-      <div className={classes.accountBtnsDiv}>
         <button className={classes.signInBtn} onClick={toLoginPage}>
           Sign In
         </button>
-      </div>
     </div>
   )
 }

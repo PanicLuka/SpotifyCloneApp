@@ -1,18 +1,26 @@
+.containerMain {
+    display: flex;
+    flex-direction: row;
+
+}
+
 .divHome {
+  flex-grow: 1;
   display: flex;
-  justify-content: top;
-  align-items: left;
+  /* justify-content: top; */
+  /* align-items: left; */
   flex-direction: column;
-  margin-left: 240px;
-  width: 87.4%;
-  height: 120vh;
+  /* margin-left: 240px; */
+  /* width: 87.4%; */
+  /* height: 120vh; */
   background-color: #2e2c2c;
+  overflow-x: scroll;
 }
 
 .featuredPlaylist {
   position: relative;
   top: 20px;
-  width: 171.65vh;
+  /* width: 171.65vh; */
   display: flex;
   justify-content: left;
   align-items: left;
@@ -27,7 +35,7 @@
   justify-content: left;
   align-items: left;
   flex-direction: row;
-  width: 171.65vh;
+  /* width: 171.65vh; */
   height: 273px;
 }
 

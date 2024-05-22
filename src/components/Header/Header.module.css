@@ -1,145 +1,83 @@
+/* Base styles */
 .navBar {
-  margin-left: 240px;
-  position: fixed;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: left;
-  height: 64px;
   background-color: #121212;
-  gap: 50vh;
-  width: 180vh;
-  z-index: 1;
-}
-
-.backAndForwardDiv {
-  margin-left: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 20px;
-  height: 32px;
-  width: 90px;
-}
-
-.btnBack {
-  width: 32px;
-  height: 32px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 50%;
-  border: none;
-}
-
-.btnForw {
-  width: 32px;
-  height: 32px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 50%;
-  border: none;
-}
-
-.backIconDiv {
-  margin-bottom: 3px;
-}
-
-.frontIconDiv {
-  margin-bottom: 3px;
-  margin-left: 1px;
-}
-
-.accountBtnsDiv {
-  position: relative;
-  left: 600px;
-  width: 230px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 40px;
-}
-
-.signUpTitle {
-  padding-top: 15px;
-  color: grey;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.signUpTitle:hover {
-  transform: scale(1.08);
-  color: white;
+  padding: 10px 20px;
 }
 
 .signInBtn {
   background-color: aliceblue;
   height: 48px;
-  width: 145px;
-  margin-left: 700px;
+  width: 95px;
   white-space: nowrap;
   border-radius: 50px;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  margin-left: auto;
 }
 
+/* Hover effect */
 .signInBtn:hover {
   transform: scale(1.08);
 }
 
-@media only screen and (max-width: 830px) {
+/* Media Queries */
+@media (max-width: 1400px) {
   .navBar {
-    width: 100%;
-    margin-left: 240px;
-    position: fixed;
-    display: flex;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navBar {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navBar {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navBar {
     flex-direction: row;
     align-items: center;
-    justify-content: left;
-    height: 64px;
-    background-color: #121212;
-    gap: 100px;
-    z-index: 1;
-    opacity: 0.9;
   }
-
-  .accountBtnsDiv {
-    width: 230px;
-    height: 48px;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    flex-direction: row;
-    gap: 40px;
-  }
-
-  .signUpTitle {
-    padding-top: 15px;
-    color: grey;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .signUpTitle:hover {
-    transform: scale(1.08);
-    color: white;
-  }
-
   .signInBtn {
-    background-color: aliceblue;
-    height: 48px;
-    width: 145px;
-    white-space: nowrap;
-    border-radius: 500px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+    margin-left: auto;
   }
+}
 
-  .signInBtn:hover {
-    transform: scale(1.08);
+@media (max-width: 768px) {
+  .navBar {
+    padding: 10px 5px;
+  }
+  .signInBtn {
+    width: 85px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navBar {
+    padding: 5px;
+  }
+  .signInBtn {
+    width: 75px;
+    height: 35px;
+  }
+}
+
+/* Ensure visibility on lower resolutions */
+@media (max-width: 480px) {
+  .signInBtn {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
   }
 }

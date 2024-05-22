@@ -22,9 +22,9 @@ function App() {
   }, [])
 
   return (
-    <main>
+    <div>
       {location.pathname !== '/login' && <Header />}
-      {location.pathname !== '/login' && <Sidebar />}
+      {/* {location.pathname !== '/login' && <Sidebar />} */}
 
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
@@ -32,7 +32,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/tracks/:id" element={<PlaylistTracks />} />
       </Routes>
-    </main>
+    </div>
   )
 }
 
