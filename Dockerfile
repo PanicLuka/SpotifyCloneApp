@@ -1,10 +1,13 @@
-FROM node:18-alpine
-WORKDIR /spotify-clone-app
+FROM node:21-alpine
 
-COPY public/ /spotify-clone-app/public
-COPY src/ /spotify-clone-app/src
-COPY package.json /spotify-clone-app/
+WORKDIR /app
 
-RUN npm install 
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
 
 CMD ["npm", "start"]

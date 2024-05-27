@@ -36,7 +36,10 @@ const PlaylistCard = (props) => {
         </div>
       )}
       <p className={classes.playlistName}>{props.name}</p>
+      <div className={classes.textHolder}>
       <p className={classes.playlistDescription}>{props.description}</p>
+
+      </div>
     </div>
   )
 }

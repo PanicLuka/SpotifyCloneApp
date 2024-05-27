@@ -1,11 +1,11 @@
-/* .card {
-  cursor: pointer;
-  width: 182px;
-  height: 320px;
-  background-color: #181818;
-  margin-left: 23px;
-  border-radius: 5px;
-} */
+
+.textHolder {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .card {
   cursor: pointer;
   width: 138px;
@@ -13,6 +13,7 @@
   background-color: #181818;
   margin-left: 10px;
   border-radius: 5px;
+  
 }
 
 .imageContainer {
@@ -21,7 +22,6 @@
 }
 
 .coverImages {
-  position: relative;
   width: 95px;
   height: 95px;
   box-shadow: 3px 3px 7px black;
@@ -31,43 +31,29 @@
   background-color: #423f3f;
 }
 
-/* .coverImages {
-  position: relative;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  border-radius: 5px;
-  width: 152px;
-  height: 160px;
-  box-shadow: 7px 7px 20px black;
-} */
-
 .playlistName {
-  position: relative;
   margin-top: 10px;
   margin-left: 15px;
   font-size: 16px;
   color: white;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .playlistDescription {
-  position: relative;
   margin-left: 15px;
   margin-right: 15px;
   color: grey;
   font-size: 12px;
+  
 }
 
 .divPlayBtn {
-  position: absolute;
-  background-color: black;
+  background-color: #423f3f;
   width: 50px;
   height: 45px;
-  top: 125px;
-  margin-left: 115px;
-  border-radius: 45px;
+
 }
 .svgPlayBtn {
   width: 50px;
@@ -79,7 +65,7 @@
   color: #1ed760;
 }
 
-@media screen and (max-width: 1400px) {
+@media (max-width: 1400px) {
   .card {
     cursor: pointer;
     width: 100px;
@@ -88,9 +74,15 @@
     margin-left: 23px;
     border-radius: 5px;
   }
+  .textHolder {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   .coverImages {
-    position: relative;
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
