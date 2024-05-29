@@ -1,13 +1,9 @@
 .mainDiv {
   display: flex;
   flex-direction: row;
-  align-items: left;
   justify-content: left;
   height: 56px;
   background-color: inherit;
-  width: 1550px;
-  left: 35px;
-  position: relative;
   border-radius: 5px;
 }
 
@@ -17,14 +13,10 @@
 .albumCover {
   width: 40px;
   height: 40px;
-  position: relative;
-  left: 80px;
-  top: 8px;
+  
 }
 
 .textDiv {
-  position: relative;
-  left: 100px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -34,24 +26,19 @@
 }
 
 .albumDiv {
-  position: relative;
-  width: 390px;
+  width: 150px;
 }
 .songName {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-weight: bold;
-  position: relative;
-  top: 8px;
 }
 
 .artist {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(207, 203, 203);
-  position: relative;
-  bottom: 5px;
 }
 
 .albumName {
@@ -59,9 +46,6 @@
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(207, 203, 203);
-  position: relative;
-  left: 250px;
-  top: 19px;
 }
 
 .addedAt {
@@ -69,26 +53,17 @@
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(207, 203, 203);
-  position: relative;
-  left: 350px;
-  top: 19px;
 }
 .duration {
   color: rgb(207, 203, 203);
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(207, 203, 203);
-  position: relative;
-  left: 620px;
-  top: 19px;
 }
 
 .orderNumber {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(207, 203, 203);
-  position: relative;
-  top: 18px;
 
-  left: 20px;
 }

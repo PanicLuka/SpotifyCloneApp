@@ -7,41 +7,27 @@
 .divHome {
   flex-grow: 1;
   display: flex;
-  /* justify-content: top; */
-  /* align-items: left; */
   flex-direction: column;
-  /* margin-left: 240px; */
-  /* width: 87.4%; */
-  /* height: 120vh; */
   background-color: #2e2c2c;
   overflow-x: scroll;
 }
 
 .featuredPlaylist {
-  position: relative;
-  top: 20px;
-  /* width: 171.65vh; */
+  margin-top: 20px;
   display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: row;
+  justify-content: space-between;
   height: 273px;
 }
 
 .dinnerPlaylists {
-  position: relative;
-  top: 40px;
+  margin-top: 40px;
   display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: row;
-  /* width: 171.65vh; */
+  justify-content: space-between;
   height: 273px;
 }
 
 .featuredPlaylistTitle {
   cursor: pointer;
-  position: relative;
   margin-top: 30px;
   margin-left: 25px;
   font-weight: bold;
@@ -53,7 +39,6 @@
 
 .dinnerPlaylistTitle {
   cursor: pointer;
-  position: relative;
   margin-top: 80px;
   margin-bottom: 15px;
   margin-left: 25px;

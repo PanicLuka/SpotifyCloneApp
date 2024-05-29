@@ -12,6 +12,8 @@ import {
 } from 'react-bootstrap-icons'
 import PlaylistTrack from '../PlaylistTrack/PlaylistTrack'
 import TracksLoader from '../HomeLoader/TracksLoader'
+import Sidebar from '../Sidebar/Sidebar'
+
 
 const PlaylistTracks = () => {
   const param = useParams()
@@ -48,6 +50,8 @@ const PlaylistTracks = () => {
     return <TracksLoader />
   }
   return (
+    <div className={classes.containerMain}>
+      <Sidebar />
     <div className={classes.mainDiv}>
       <div className={classes.textDiv}>
         {playlist.images.map((image, index) => {
@@ -104,6 +108,7 @@ const PlaylistTracks = () => {
           />
         )
       })}
+    </div>
     </div>
   )
 }
