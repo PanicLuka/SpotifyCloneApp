@@ -3,11 +3,11 @@
 }
 
 .mainDiv {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   background-color: #2e2c2c;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .textDiv {
@@ -188,14 +188,13 @@
   display: flex;
   height: 20px;
   flex-direction: row;
-  justify-content: left;
-  align-items: left;
+  align-items: center;
   background-color: inherit;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .nameHeader {
-  position: relative;
-  left: 125px;
   font-size: 13px;
   color: #c0bbbb;
   font-family: Arial, Helvetica, sans-serif;
@@ -203,8 +202,6 @@
 }
 
 .albumHeader {
-  position: relative;
-  left: 680px;
   font-size: 13px;
   color: #c0bbbb;
   font-weight: bold;
@@ -212,8 +209,6 @@
 }
 
 .dateHeader {
-  position: relative;
-  left: 1125px;
   font-size: 13px;
   color: #c0bbbb;
   font-weight: bold;
@@ -222,17 +217,13 @@
 }
 
 .timeHeader {
-  position: relative;
-  left: 1435px;
   font-size: 13px;
   color: #c0bbbb;
 }
 
 .borderLine {
-  width: 1550px;
-  position: relative;
+  width: 100%;
   color: #c0bbbb;
-  left: 45px;
 }
 
 .loadingDiv {
